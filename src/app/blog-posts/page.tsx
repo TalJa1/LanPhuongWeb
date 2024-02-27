@@ -17,31 +17,31 @@ export default function BlogPostList() {
     syncWithLocation: true,
   });
 
-  const { data: categoryData, isLoading: categoryIsLoading } = useMany({
-    resource: "categories",
-    ids:
-      tableProps?.dataSource
-        ?.map((item) => item?.category?.id)
-        .filter(Boolean) ?? [],
-    queryOptions: {
-      enabled: !!tableProps?.dataSource,
-    },
-  });
+  // const { data: categoryData, isLoading: categoryIsLoading } = useMany({
+  //   resource: "categories",
+  //   ids:
+  //     tableProps?.dataSource
+  //       ?.map((item) => item?.category?.id)
+  //       .filter(Boolean) ?? [],
+  //   queryOptions: {
+  //     enabled: !!tableProps?.dataSource,
+  //   },
+  // });
 
   return (
     <List>
       <Table {...tableProps} rowKey="id">
         <Table.Column dataIndex="id" title={"ID"} />
-        <Table.Column dataIndex="title" title={"Title"} />
+        <Table.Column dataIndex="productName" title={"productName"} />
         <Table.Column
-          dataIndex="content"
-          title={"Content"}
-          render={(value: any) => {
-            if (!value) return "-";
-            return <MarkdownField value={value.slice(0, 80) + "..."} />;
-          }}
+          dataIndex="quantity"
+          title={"quantity"}
+          // render={(value: any) => {
+          //   if (!value) return "-";
+          //   return <MarkdownField value={value.slice(0, 80) + "..."} />;
+          // }}
         />
-        <Table.Column
+        {/* <Table.Column
           dataIndex={"category"}
           title={"Category"}
           render={(value) =>
@@ -51,13 +51,13 @@ export default function BlogPostList() {
               categoryData?.data?.find((item) => item.id === value?.id)?.title
             )
           }
-        />
-        <Table.Column dataIndex="status" title={"Status"} />
-        <Table.Column
+        /> */}
+        <Table.Column dataIndex="price" title={"price"} />
+        {/* <Table.Column
           dataIndex={["createdAt"]}
           title={"Created at"}
           render={(value: any) => <DateField value={value} />}
-        />
+        /> */}
         <Table.Column
           title={"Actions"}
           dataIndex="actions"
