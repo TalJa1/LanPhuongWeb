@@ -4,18 +4,19 @@ import { AuthPage as AuthPageBase, ThemedTitleV2 } from "@refinedev/antd";
 import type { AuthPageProps } from "@refinedev/core";
 
 export const AuthPage = (props: AuthPageProps) => {
+  const adminUser = {
+    email: "phuong@gmail.com",
+    pass: "123",
+  };
+
   return (
     <AuthPageBase
       {...props}
       formProps={{
-        initialValues: { email: "phuong@gmail.com", password: "123" },
+        initialValues: { email: "", password: "" },
       }}
       title={
-        <ThemedTitleV2
-          collapsed={false}
-          text="Lan Phuong"
-          icon={<AppIcon />}
-        />
+        <ThemedTitleV2 collapsed={false} text="Lan Phuong" icon={<AppIcon />} />
       }
     />
   );
