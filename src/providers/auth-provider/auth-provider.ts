@@ -23,7 +23,7 @@ export const authProvider: AuthBindings = {
     // Suppose we actually send a request to the back end here.
     const user = mockUsers[0];
 
-    if (user) {
+    if (email === "phuong@gmail.com" && password === "123") {
       Cookies.set("auth", JSON.stringify(user), {
         expires: 30, // 30 days
         path: "/",
