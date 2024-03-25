@@ -45,12 +45,22 @@ export default function RootLayout({
                     notificationProvider={useNotificationProvider}
                     authProvider={authProvider}
                     resources={[
+                      // {
+                      //   name: "blog-posts",
+                      //   list: "/blog-posts",
+                      //   create: "/blog-posts/create",
+                      //   edit: "/blog-posts/edit/:id",
+                      //   show: "/blog-posts/show/:id",
+                      //   meta: {
+                      //     canDelete: true,
+                      //   },
+                      // },
                       {
-                        name: "blog-posts",
-                        list: "/blog-posts",
-                        create: "/blog-posts/create",
-                        edit: "/blog-posts/edit/:id",
-                        show: "/blog-posts/show/:id",
+                        name: "customers",
+                        list: "/customers",
+                        create: "/customers/create",
+                        edit: "/customers/edit/:id",
+                        show: "/customers/show/:id",
                         meta: {
                           canDelete: true,
                         },
