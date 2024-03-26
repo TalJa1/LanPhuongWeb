@@ -8,7 +8,8 @@ import {
   useTable,
 } from "@refinedev/antd";
 import { BaseRecord } from "@refinedev/core";
-import { Space, Table } from "antd";
+import { Input, Space, Table } from "antd";
+
 
 export default function CustomerList() {
   const { tableProps } = useTable({
@@ -27,9 +28,21 @@ export default function CustomerList() {
           dataIndex="actions"
           render={(_, record: BaseRecord) => (
             <Space>
-              <EditButton hideText size="small" recordItemId={record.customer_id} />
-              <ShowButton hideText size="small" recordItemId={record.customer_id} />
-              <DeleteButton hideText size="small" recordItemId={record.customer_id} />
+              <EditButton
+                hideText
+                size="small"
+                recordItemId={record.customer_id}
+              />
+              <ShowButton
+                hideText
+                size="small"
+                recordItemId={record.customer_id}
+              />
+              <DeleteButton
+                hideText
+                size="small"
+                recordItemId={record.customer_id}
+              />
             </Space>
           )}
         />
