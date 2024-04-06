@@ -10,7 +10,6 @@ import {
 import { BaseRecord } from "@refinedev/core";
 import { Input, Space, Table } from "antd";
 
-
 export default function ProductList() {
   const { tableProps } = useTable({
     syncWithLocation: true,
@@ -23,8 +22,13 @@ export default function ProductList() {
         <Table.Column dataIndex="name" title={"Name"} />
         <Table.Column dataIndex="price" title={"Price"} />
         <Table.Column dataIndex="quantity" title={"!uantity"} />
-        <Table.Column dataIndex="image_path" title={"Image_path"} />
-        <Table.Column dataIndex="description" title={"Description"} />
+        <Table.Column
+          title={"Image"}
+          dataIndex="image_path"
+          render={(imagePath) => (
+            <img src={imagePath} alt="Product" style={{ maxWidth: 100 }} />
+          )}
+        />
         <Table.Column
           title={"Actions"}
           dataIndex="actions"
