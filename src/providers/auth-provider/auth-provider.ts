@@ -5,8 +5,8 @@ import Cookies from "js-cookie";
 
 const mockUsers = [
   {
-    name: "John Doe",
-    email: "johndoe@mail.com",
+    name: "Phuong Vu",
+    email: "phuong@gmail.com",
     roles: ["admin"],
     avatar: "https://i.pravatar.cc/150?img=1",
   },
@@ -30,6 +30,7 @@ export const authProvider: AuthBindings = {
       });
       return {
         success: true,
+        role: ["admin"],
         redirectTo: "/",
       };
     }
