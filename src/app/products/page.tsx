@@ -26,6 +26,7 @@ export default function ProductList() {
           title={"Image"}
           dataIndex="image_path"
           render={(imagePath) => (
+            // eslint-disable-next-line @next/next/no-img-element
             <img src={imagePath} alt="Product" style={{ maxWidth: 100 }} />
           )}
         />
