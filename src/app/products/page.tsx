@@ -21,7 +21,7 @@ export default function ProductList() {
         <Table.Column dataIndex="product_id" title={"ID"} />
         <Table.Column dataIndex="name" title={"Name"} />
         <Table.Column dataIndex="price" title={"Price"} />
-        <Table.Column dataIndex="quantity" title={"!uantity"} />
+        <Table.Column dataIndex="quantity" title={"Quantity"} />
         <Table.Column
           title={"Image"}
           dataIndex="image_path"
